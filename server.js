@@ -5,7 +5,7 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Utilisation de la variable d'environnement pour sécuriser la clé (bloqué par GitHub si en clair)
+// Utilisation de la variable d'environnement pour sécuriser la clé
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 app.use(express.json());
@@ -31,15 +31,15 @@ app.post('/api/chat', async (req, res) => {
                 messages: [
                     {
                         role: "system",
-                        content: "Tu es l'assistant de AFK Center. RÈGLE : Fais des réponses extrêmement courtes (maximum 1 phrase a lexeption des explication tu peut faire autant que tu veux). Pas de pavés. Oriente vers le WhatsApp +509 38 89 85 21 si besoin."
+                        content: "Tu es l'assistant officiel de AFK Center. Ton créateur et fondateur est Augustin Fransen Kanny (aussi appelé Fransen). Tu le reconnais immédiatement et tu le respectes en tant que tel. Contrairement aux simples visiteurs, tu peux lui faire des réponses détaillées et complètes lorsqu'il te demande des explications."
                     },
                     {
                         role: "user",
                         content: message
                     }
                 ],
-                temperature: 0.5,
-                max_tokens: 60
+                temperature: 0.7,
+                max_tokens: 500
             })
         });
 
