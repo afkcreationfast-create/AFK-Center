@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AFK Center - Hub Officiel & Portfolio</title>
+    <!-- Balises SEO pour le référencement sur les moteurs de recherche -->
+    <meta name="description" content="Bienvenue sur AFK Center, le hub numérique officiel fondé par Augustin Fransen Kanny. Découvrez nos services, boutiques, réseaux sociaux et notre assistant IA.">
+    <meta name="keywords" content="AFK Center, AFK Création, Augustin Fransen Kanny, Fransen, Haïti, marketing, services numériques">
+    <meta name="author" content="Augustin Fransen Kanny">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -540,7 +545,7 @@
         </div>
 
         <div class="footer">
-            &copy; 2026 AFK Création et Marketing. Tous droits réservés.
+            &copy; 2026 AFK Création et Marketing. Fondé par Augustin Fransen Kanny. Tous droits réservés.
         </div>
     </div>
 
@@ -570,7 +575,7 @@
             </div>
         </div>
         <div class="chat-footer">
-            <input type="text" class="chat-input" id="chatInput" placeholder="Écrivez un message court..." onkeypress="handleKeyPress(event)">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Écrivez un message..." onkeypress="handleKeyPress(event)">
             <button class="send-btn" onclick="sendMessage()">
                 <i class="fa-solid fa-paper-plane"></i>
             </button>
@@ -666,7 +671,7 @@
             try {
                 let finalMessage = text;
                 if (isCreatorAuthenticated) {
-                    finalMessage = "[CRÉATEUR FRANSEN] " + text;
+                    finalMessage = "[CRÉATEUR AUGUSTIN FRANSEN KANNY] " + text;
                 }
 
                 const response = await fetch('/api/chat', {
@@ -694,7 +699,7 @@
                 chatBody.removeChild(loadingMsg);
                 const errorMsg = document.createElement('div');
                 errorMsg.className = 'message bot';
-                errorMsg.innerHTML = "Erreur. WhatsApp : +509 38 89 85 21";
+                errorMsg.innerHTML = "Erreur de connexion. WhatsApp : +509 38 89 85 21";
                 chatBody.appendChild(errorMsg);
                 chatBody.scrollTop = chatBody.scrollHeight;
             }
